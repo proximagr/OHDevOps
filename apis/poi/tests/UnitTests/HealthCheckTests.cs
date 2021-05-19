@@ -9,8 +9,8 @@ namespace UnitTests
         [Fact]
         public void HealthCheckTestModel()
         {
-            Assert.Equal("POI Service Healthcheck", new Healthcheck().Message);
-            Assert.Equal("Healthy", new Healthcheck().Status);
+            Assert.Equal("POI Service Healthcheck 1", new Healthcheck().Message);
+            Assert.Equal("Healthy 1", new Healthcheck().Status);
 
         }
     }
