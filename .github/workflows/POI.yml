@@ -33,7 +33,7 @@ jobs:
         run: docker login openhacknoq67g44acr.azurecr.io -u ${{ secrets.ACR_USER }} -p ${{ secrets.ACR_KEY }}
         
       - name: Docker build
-        run: docker build -t openhacknoq67g44acr.azurecr.io/devopsoh/api-poi:${{github.run_number}} --build-arg build_version=${{GITHUB_RUN_NUMBER}} apis/poi/web
+        run: docker build -t openhacknoq67g44acr.azurecr.io/devopsoh/api-poi:${{ github.run_number }} --build-arg build_version=${{ github.run_number }} apis/poi/web
         
       - name: Docker push
-        run: docker push openhacknoq67g44acr.azurecr.io/devopsoh/api-poi:${{github.run_number}}
+        run: docker push openhacknoq67g44acr.azurecr.io/devopsoh/api-poi:${{ github.run_number }}
