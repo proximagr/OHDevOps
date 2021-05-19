@@ -44,9 +44,10 @@ jobs:
         
       - name: Docker push
         run: docker push 'openhacknoq67g44acr.azurecr.io/devopsoh/api-poi:${{github.run_number}}'
-        
+
   deploy:
     runs-on: ubuntu-latest
+    needs: build_and_push
     steps:
     - name: 'Checkout GitHub Action' 
       uses: actions/checkout@main
